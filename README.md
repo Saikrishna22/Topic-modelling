@@ -22,6 +22,7 @@ The first step is generating document-term matrix. Given m documents and n words
 We then fill document-term matrix with a tf-idf score. Tf-idf, or term frequency-inverse document frequency where the more frequently the term appears in the document, the lesser its weight and importance, and the more infrequently it appears across the corpus, the greater its weight and importance.
 
  Matrix A is very sparse and has many dimensions. So we want to perform dimensionality reduction on A. Dimensionality reduction can be performed using truncated SVD. SVD, or singular value decomposition, is a technique in linear algebra that factorizes any matrix M into the product of 3 separate matrices: 
+                         
                          --->>M=U*S*V, 
 where S is a diagonal matrix of the singular values of M.
 
@@ -30,4 +31,5 @@ As a result of SVD we get ,  U is our document-topic matrix, and V is our term-t
 With these document vectors and term vectors, we can now easily apply measures such as cosine similarity to evaluate:
 
 1.the similarity of different documents
+
 2.the similarity of different words
